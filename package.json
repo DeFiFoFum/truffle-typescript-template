@@ -5,6 +5,7 @@
   "author": "DeFiFoFum",
   "main": "index.js",
   "scripts": {
+    "ganache": "npx ganache-cli",
     "test": "truffle test",
     "compile": "truffle compile",
     "compile:all": "truffle compile --all",
@@ -41,5 +42,7 @@
     "typechain": "^4.0.3",
     "typescript": "^4.2.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "ganache-cli": "^6.12.2"
+  }
 }
