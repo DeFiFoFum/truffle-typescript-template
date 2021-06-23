@@ -10,6 +10,13 @@ Click "Use as Template" to create a repo on GitHub based on this repo. Otherwise
 ## Setup
 Create a `.env` file based off of `.env.example` to deploy contracts to bsc mainnet/testnet and to verify deployed contracts.  
 
+## Development
+Start a local development blockchain by running the following command:  
+`yarn ganache`  
+  
+Deploy contracts to the development blockchain:  
+`yarn migrate:development` 
+
 ## Compile
 `yarn compile`
 
@@ -23,7 +30,7 @@ Create a `.env` file based off of `.env.example` to deploy contracts to bsc main
 `yarn migrate:testnet [--reset]`  
 `yarn verify:testnet`  
   
-_* new contracts that are added must be added to the verification script in package.json by adding `&&` to the end with the new contract verification._
+_* new contracts that are created must be added to the verification script in package.json by adding `&&` to the end with the new contract verification._
 
 
 ## Lint
