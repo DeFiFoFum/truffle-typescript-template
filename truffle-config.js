@@ -21,8 +21,8 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 require('dotenv').config();
 
-const BSC_DEPLOYER_KEY = process.env.BSC_DEPLOYER_KEY;
-const BSC_TESTNET_DEPLOYER_KEY = process.env.BSC_TESTNET_DEPLOYER_KEY;
+const MAINNET_DEPLOYER_KEY = process.env.MAINNET_DEPLOYER_KEY;
+const TESTNET_DEPLOYER_KEY = process.env.TESTNET_DEPLOYER_KEY;
 
 module.exports = {
   networks: {
@@ -31,15 +31,15 @@ module.exports = {
       port: 8545,            // Standard BSC port (default: none)
       network_id: "*",       // Any network (default: none)
     },
-    testnet: {
-      provider: () => new HDWalletProvider(BSC_TESTNET_DEPLOYER_KEY, `https://data-seed-prebsc-1-s1.binance.org:8545`),
+    "bsc-testnet": {
+      provider: () => new HDWalletProvider(TESTNET_DEPLOYER_KEY, `https://data-seed-prebsc-1-s1.binance.org:8545`),
       network_id: 97,
       confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: true
     },
     bsc: {
-      provider: () => new HDWalletProvider(BSC_DEPLOYER_KEY, `https://bsc-dataseed1.binance.org`),
+      provider: () => new HDWalletProvider(MAINNET_DEPLOYER_KEY, `https://bsc-dataseed1.binance.org`),
       network_id: 56,
       confirmations: 10,
       timeoutBlocks: 200,
@@ -50,8 +50,11 @@ module.exports = {
     'truffle-plugin-verify'
   ],
   api_keys: {
-    // Add BSCSCAN_API_KEY in .env file to verify contracts deployed through truffle
-    etherscan: process.env.BSCSCAN_API_KEY
+    etherscan: process.env.ETHERSCAN_API_KEY,
+    bscscan: process.env.BSCSCAN_API_KEY,
+    hecoinfo: 'MY_API_KEY',
+    ftmscan: 'MY_API_KEY',
+    polygonscan: 'MY_API_KEY',
   },
   // Set default mocha options here, use special reporters etc.
   mocha: {
