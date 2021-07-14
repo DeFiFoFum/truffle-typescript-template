@@ -37,6 +37,18 @@ _* new contracts that are created must be added to the verification script in pa
 Lint with `solhint`  
 `yarn lint` / `yarn lint:fix`    
 
+## Test
+Tests are architected with `@openzeppelin` test environment. This allows tests to be run independently of an external development blockchain.   
+
+Test the project with `yarn test`   
+
+Tests are using  
+`@openzeppelin/test-helpers`  
+`@openzeppelin/test-environment`  
+
+### Automated Tests
+The OpenZeppelin test environment coupled with Github actions facilitates automated contract tests on pushes to GitHub! 
+
 ## Generate Types from Contracts
 Use `typechain` to generate contract interfaces for UI integration.  
 `yarn gen:types`  
