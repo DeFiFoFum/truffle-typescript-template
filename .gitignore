@@ -4,6 +4,9 @@ build/
 ## Typechain Types
 types/ 
 
+# VSCode
+.vscode/settings.json
+
 # env
 .env
 

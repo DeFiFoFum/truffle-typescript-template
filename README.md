@@ -53,3 +53,7 @@ The OpenZeppelin test environment coupled with Github actions facilitates automa
 Use `typechain` to generate contract interfaces for UI integration.  
 `yarn gen:types`  
 
+## Contract Size 
+Use the `truffle-contract-size` module to find the size of each contract in the `contracts/` directory with:  
+`yarn size`  
+

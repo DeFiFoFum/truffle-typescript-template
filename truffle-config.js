@@ -41,20 +41,21 @@ module.exports = {
     bsc: {
       provider: () => new HDWalletProvider(MAINNET_DEPLOYER_KEY, `https://bsc-dataseed1.binance.org`),
       network_id: 56,
-      confirmations: 10,
+      confirmations: 2,
       timeoutBlocks: 200,
-      skipDryRun: true
+      skipDryRun: false
     },
   },
   plugins: [
-    'truffle-plugin-verify'
+    'truffle-plugin-verify',
+    'truffle-contract-size'
   ],
   api_keys: {
     etherscan: process.env.ETHERSCAN_API_KEY,
     bscscan: process.env.BSCSCAN_API_KEY,
-    hecoinfo: 'MY_API_KEY',
-    ftmscan: 'MY_API_KEY',
-    polygonscan: 'MY_API_KEY',
+    hecoinfo: process.env.HECOINFO_API_KEY,
+    ftmscan: process.env.FTMSCAN_API_KEY,
+    polygonscan: process.env.POLYGONSCAN_API_KEY,
   },
   // Set default mocha options here, use special reporters etc.
   mocha: {
