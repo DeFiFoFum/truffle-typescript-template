@@ -31,19 +31,19 @@ module.exports = {
       port: 8545,            // Standard BSC port (default: none)
       network_id: "*",       // Any network (default: none)
     },
-    "bsc-testnet": {
-      provider: () => new HDWalletProvider(TESTNET_DEPLOYER_KEY, `https://data-seed-prebsc-1-s1.binance.org:8545`),
-      network_id: 97,
-      confirmations: 2,
-      timeoutBlocks: 200,
-      skipDryRun: true
-    },
     bsc: {
       provider: () => new HDWalletProvider(MAINNET_DEPLOYER_KEY, `https://bsc-dataseed1.binance.org`),
       network_id: 56,
       confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: false
+    },
+    "bsc-testnet": {
+      provider: () => new HDWalletProvider(TESTNET_DEPLOYER_KEY, `https://data-seed-prebsc-1-s1.binance.org:8545`),
+      network_id: 97,
+      confirmations: 2,
+      timeoutBlocks: 200,
+      skipDryRun: true
     },
   },
   plugins: [
