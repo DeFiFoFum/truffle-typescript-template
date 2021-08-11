@@ -18,6 +18,7 @@
     "migrate:development": "tsc -p ./tsconfig.json --outDir ./migrations && truffle migrate --network development",
     "verify:bsc": "truffle run verify Migrations --network bsc",
     "verify:bsc-testnet": "truffle run verify Migrations --network bsc-testnet",
+    "flatten": "truffle-flattener ./contracts/MockToken.sol > ./MockToken_flat.sol",
     "typecheck": "tsc --noEmit",
     "lint": "solhint './contracts/**/*.sol'",
     "lint:fix": "solhint './contracts/**/*.sol' --fix",
