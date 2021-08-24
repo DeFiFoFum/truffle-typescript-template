@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "ganache": "npx ganache-cli",
-    "test": "yarn run compile && yarn mocha --exit --timeout 10000 && npm run coverage && rm -rf ./coverage && rm -rf ./coverage.json",
+    "test": "yarn run compile && yarn mocha --exit --timeout 10000 && yarn run coverage && rm -rf ./coverage && rm -rf ./coverage.json",
     "coverage": "node ./coverage.js",
     "size": "truffle run contract-size",
     "compile": "truffle compile",
@@ -15,7 +15,7 @@
     "postinstall": "yarn compile && yarn gen:types",
     "migrate:bsc": "tsc -p ./tsconfig.json --outDir ./migrations && truffle migrate --network bsc",
     "migrate:bsc-testnet": "tsc -p ./tsconfig.json --outDir ./migrations && truffle migrate --network bsc-testnet",
-    "migrate:development": "tsc -p ./tsconfig.json --outDir ./migrations && truffle migrate --network development",
+    "migrate:dev": "tsc -p ./tsconfig.json --outDir ./migrations && truffle migrate --network development",
     "verify:bsc": "truffle run verify Migrations --network bsc",
     "verify:bsc-testnet": "truffle run verify Migrations --network bsc-testnet",
     "flatten": "truffle-flattener ./contracts/MockToken.sol > ./MockToken_flat.sol",
