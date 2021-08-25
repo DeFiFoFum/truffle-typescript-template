@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: MIT
-// solhint-disable-next-line
-pragma solidity >=0.8.6;
+pragma solidity 0.8.7;
 
 contract Migrations {
     address public owner = msg.sender;
