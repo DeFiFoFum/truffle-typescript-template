@@ -17,7 +17,7 @@ Start a local development blockchain by running the following command:
 `yarn ganache`  
   
 Deploy contracts to the development blockchain:  
-`yarn migrate:development` 
+`yarn migrate:dev` 
 
 ## Compile
 `yarn compile`
@@ -44,13 +44,21 @@ Lint with `solhint`
 </br>
 
 ## Test
-Tests are architected with `@openzeppelin` test environment. This allows tests to be run independently of an external development blockchain.   
+Tests are run with `@openzeppelin` test environment. This allows tests to be run independently of an external development blockchain.   
 
 Test the project with `yarn test`   
 
 Tests are using  
 `@openzeppelin/test-helpers`  
 `@openzeppelin/test-environment` 
+
+</br>
+
+### Solidity Doc Gen
+`yarn gen:docs`
+[solidity-docgen](https://github.com/OpenZeppelin/solidity-docgen) can be used in this repo to scrape [NatSpec](https://docs.soliditylang.org/en/latest/natspec-format.html) comments into markdown files for easy document generation.  
+
+_This module uses the solc package to generate the documents. If the compiler is changed, ensure that the correct solc version is installed: `yarn add solc@0.8.7`_
 
 </br>
 
