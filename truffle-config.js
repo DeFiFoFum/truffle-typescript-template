@@ -57,11 +57,6 @@ module.exports = {
     ftmscan: process.env.FTMSCAN_API_KEY,
     polygonscan: process.env.POLYGONSCAN_API_KEY,
   },
-  // Set default mocha options here, use special reporters etc.
-  mocha: {
-    // timeout: 100000
-  },
-
   // Configure your compilers
   compilers: {
     solc: {
