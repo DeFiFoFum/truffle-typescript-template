@@ -1,4 +1,10 @@
 # Truffle Typescript Boilerplate
+![tests](https://github.com/DeFiFoFum/truffle-typescript-template/actions/workflows/tests/badge.svg)
+
+__NOTICE: For new projects the badge link above must be updated as per:__
+`![tests](https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/tests/badge.svg)`
+
+
 Build Solidity smart contracts with truffle, openzeppelin and typescript support.
 
 ## Install 
