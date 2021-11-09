@@ -44,6 +44,8 @@
     "@openzeppelin/test-helpers": "^0.5.12",
     "@truffle/hdwallet-provider": "^1.4.1",
     "@typechain/truffle-v5": "^4.0.1",
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
     "chai": "^4.3.4",
     "dotenv": "^8.2.0",
     "ganache-cli": "^6.12.2",
