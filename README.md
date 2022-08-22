@@ -1,3 +1,4 @@
+## 🛑 DEPRECATED in place of [DeFiFoFum/hardhat-template](https://github.com/DeFiFoFum/hardhat-template)
 # Truffle Typescript Boilerplate
 ![tests](https://github.com/DeFiFoFum/truffle-typescript-template/actions/workflows/tests/badge.svg)
 
